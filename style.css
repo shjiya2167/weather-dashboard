@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    min-height: 100vh;
+    padding: 30px;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #2563eb;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.current-weather {
+    text-align: center;
+    padding: 30px;
+    margin: 20px 0;
+    background: #eaf3ff;
+    border-radius: 12px;
+}
+
+.current-weather h1 {
+    font-size: 55px;
+    margin: 15px;
+    color: #2563eb;
+}
+
+.current-weather p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    text-align: center;
+    background: #eaf3ff;
+    padding: 15px 8px;
+    border-radius: 10px;
+}
+
+.forecast-card p {
+    margin: 8px 0;
+}
+
+.recent {
+    margin: 15px 0;
+}
+
+.recent button {
+    margin: 5px;
+    padding: 8px 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    text-align: center;
+    margin: 15px;
+    color: #e74c3c;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #111827;
+    color: white;
+}
+
+body.dark .container {
+    background: #1f2937;
+}
+
+body.dark .current-weather,
+body.dark .forecast-card {
+    background: #374151;
+    color: white;
+}
+
+body.dark input {
+    background: #374151;
+    color: white;
+    border-color: #555;
+}
+
+body.dark header h1 {
+    color: #93c5fd;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .current-weather h1 {
+        font-size: 40px;
+    }
+}

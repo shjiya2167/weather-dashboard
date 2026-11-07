@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>☀ Weather Dashboard</h1>
+            <button id="themeBtn">🌙 Dark Mode</button>
+        </header>
+
+        <section class="search-box">
+            <input type="text" id="cityInput"
+                   placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </section>
+
+        <p id="message"></p>
+
+        <div id="recentSearches" class="recent"></div>
+
+        <section id="weatherSection" class="hidden">
+
+            <div class="current-weather">
+                <h2 id="cityName"></h2>
+                <h1 id="temperature"></h1>
+                <p id="condition"></p>
+                <p id="wind"></p>
+                <button id="unitBtn">Switch to °F</button>
+            </div>
+
+            <h2>5-Day Forecast</h2>
+            <div id="forecast" class="forecast"></div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
